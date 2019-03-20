@@ -13,12 +13,14 @@
     1. 遍历求出字符串中所有的子串，即0-1，0-2，0-3 ... 0-n ... n-1-n；
     2. 遍历这些子串获取到所有回文串；
     3. 取这些回文串中长度最大的；
+    4. 边界情况，字符串为空；字符串只有一个字符；
 
 代码实现：
 
         public static string GetLongestCommonSubString(string s)
         {
             var len = s.Length;
+            if(len ==0) return string.Empty;
             var array = s.ToArray();
             var start=0;
             var maxLength=0;
@@ -33,7 +35,7 @@
                         {
                             break;
                         }
-                        if(tmpi+1 >= tmpj-1 && j-i >maxLength)
+                        if(tmpi+1 >= tmpj-1 && j-i >= maxLength)
                         {
                             start =i;
                             maxLength =j-i+1;
@@ -41,7 +43,7 @@
                     }
                 }
             }
-            return s.Substring(start,len ==1?1:maxLength);
+            return s.Substring(start,maxLength ==0?1:maxLength);
         }  
 
 
