@@ -55,6 +55,15 @@ leetcode会提示时间超过限制
 
 ## Review
 
+本周主要研究了一下Signalr，什么是 signalr 呢？
+
+>ASP.NET Core SignalR is an open-source library that simplifies adding real-time web functionality to apps. Real-time web functionality enables server-side code to push content to clients instantly.
+
+主要用到实时性比较高的前后断交互场景，赋予前段代码可以调用后端函数的能力，以及server端代码push内容到客户端。**立个Flag：下周share一个基于 Signalr 的扫码登录 Demo**
+
+MSDN：https://docs.microsoft.com/zh-cn/aspnet/core/signalr/introduction?view=aspnetcore-2.2
+
+*PS:中文版翻译简直惨不忍睹，看英文反而理解的更清楚*
 
 ## Tip
 
