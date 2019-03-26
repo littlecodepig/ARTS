@@ -52,7 +52,11 @@ leetcode会提示时间超过限制
 
 分析：
 
-    1. 假设 str[i] - str[j] 之间是回文，则 str[i-1] - str[j-1] 之间也是回文
+    1. 假设 str[i] - str[j] 之间是回文，则 str[i-1] - str[j-1] 之间也是回文；同理，str[i-1] - str[j-1] 不是回文的话，str[i] - str[j] 之间肯定也不是回文；
+    2. 最优子结构：str[i,j] = str[i-1,j-1],str[i]=str[j]
+                           = 0,str[i]=str[j]
+    3. 初始值，str[i,i] = 1 ,
+       如果 str[i,i+1]=1 ,则 str[i] = str[i+1]
 
 
 ## Review
