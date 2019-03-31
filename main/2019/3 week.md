@@ -5,6 +5,12 @@
 
 ## Review
 
+https://simpleprogrammer.com/store/products/learn-anything-quickly/
+
+首先这个网站挺不错，是通过看 原则 那本书知道的, 这文章说了，我们应该学会如何高效的学习，而不是追逐各种各样的技术，或者一个技术的全部细节，因为你现在知道的知识，五年后可能超过50%会过时。而且即使你通读了整个教程，真正开始做的时候，可以记住的也是少数，成功的开发者这都是深入某项技术，掌握其中的20%重要的部分，并以此可能进行工作即可，细节可以带着问题再去学习，可以事半功倍。
+
+> So I expected that the tradeoff for rapid learning is a shallower understanding and less ability to apply what you’ve learned.
+> **作者的观点：** 所以我认为快速学习的代价是肤浅的理解和应用所学知识的能力。
 
 ## Tip
 
@@ -20,6 +26,10 @@
 
 #### 3. IE8下，使用 date()兼容问题
 使用 new date('yyyy-MM-dd') 形式进行初始化，再chrome下正常，再IE8 下面显示 NaN ,初始话日期问题，使用 yyyy/MM//dd 日期格式问题解决。
+
+#### 4. 英语单词
+
+full stack developer 全栈开发
 
 ## Share
 
