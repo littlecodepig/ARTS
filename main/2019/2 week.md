@@ -58,6 +58,41 @@ leetcode会提示时间超过限制
     3. 初始值，str[i,i] = 1 ,
        如果 str[i,i+1]=1 ,则 str[i] = str[i+1]
 
+        //动态规划
+        public static string GetLongestCommonSubString2(string s)
+        {
+            var len = s.Length;
+            if(len ==0) return string.Empty;
+            var array = s.ToArray();
+            var start=0;
+            var maxLength=0;
+            var results = new int[len,len];
+
+            //初始化长度为1，和2的回文
+            for(int i =0 ; i<len-1;i++)
+            {
+                results[i,i]=1;
+                if(array[i] == array[i+1])
+                    results[i,i+1]=1;
+            }
+
+            for(int i =len-2;i>=0;i--)
+            {
+                for(int j =i+1;j<len;j++){
+                    if(array[i]== array[j] && (j-i<3 || results[i+1,j-1]==1))
+                    {
+                        results[i,j]=1;
+                        if(j-i>maxLength)
+                        {
+                            maxLength = j-i;
+                            start = i;
+                        }   
+                    }    
+                }
+            }
+
+            return s.Substring(start,maxLength+1);
+        }
 
 ## Review
 
