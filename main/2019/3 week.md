@@ -2,6 +2,39 @@
 
 ## Algorithm
 
+[两数相加](https://leetcode-cn.com/problems/add-two-numbers/)
+
+        public static ListNode AddTwoNumbers(ListNode l1,ListNode l2)
+        {            
+            var sum = l1.val + l2.val;
+            var divisor = sum / 10;
+            var node = new ListNode(sum % 10);
+            Recursion(node,l1?.next,l2?.next,divisor);
+            return node;
+        }
+
+        private static ListNode Recursion(ListNode result,ListNode l1, ListNode l2,int divisor)
+        {
+            if(l1 == null && l2 == null && divisor == 0)return result;
+            int i,j=0;
+            if(l1 == null)
+                i=0;
+            else
+            {
+                i = l1.val;
+            }
+            if(l2 == null)
+                j=0;
+            else
+            {
+                j=l2.val;
+            }
+
+            var sum = i+j+divisor;
+            divisor = sum / 10;
+            result.next = new ListNode(sum % 10);
+            return Recursion(result.next,l1?.next,l2?.next,divisor);
+        }
 
 ## Review
 
