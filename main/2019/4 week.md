@@ -1,0 +1,46 @@
+# 第4周    20190401-0407
+
+## Algorithm
+
+[无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/)
+
+代码：
+
+        private static int LengthOfSubString(string s)
+        {
+            var len = s.Length;
+            var list = s.ToArray();
+            var maxSubLen = 0;
+
+            HashSet<char> set = new HashSet<char>();
+            int i=0,j=0;
+            while(i<len && j < len)
+            {
+                if(!set.Contains(list[j]))
+                {
+                    set.Add(list[j++]);
+                    maxSubLen = Math.Max(maxSubLen,j-i);
+                }
+                else{
+                    set.Remove(list[i++]);
+                }
+
+            }
+            return maxSubLen;
+        }
+
+## Review
+
+
+## Tip
+
+#### 1.Decompose Conditional（分解条件表达式）
+
+将复杂的条件表达式分解到独立的函数中，一方面使原来的条件语句更加简单清晰，以方便可读性更强。
+
+#### 2.Consolidate Conditional Expression(合并条件表达式)
+
+将包含相同返回的多个条件表达式，移动到一个函数中，从而简化复杂的一堆判断逻辑
+
+## Share
+
