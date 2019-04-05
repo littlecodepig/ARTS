@@ -29,6 +29,41 @@
             return maxSubLen;
         }
 
+[Z 字形变换](https://leetcode-cn.com/problems/zigzag-conversion/)
+
+代码：
+
+        private static string ConvertZ(string s,int numRows)
+        {            
+            if(string.IsNullOrEmpty(s) ||s.Length <= numRows){
+                return s;
+            }
+            var len = s.Length;
+            var columns = len/numRows;
+            var array = s.ToArray();
+            var result = string.Empty;
+            Func<int,int> func = (j)=>{return j*(2*numRows-2);};
+            //每行间距都是，2n-2
+            int i=0,j=0;
+            while(i < numRows){
+                if(j<columns){
+                    if(i==0 || i== numRows-1){
+                        result+= j==0?array[i]: array[func(j)];
+                    }else{
+                        result+= j==0?array[i]: array[func(j)-i]+array[func(j)+i];
+                    }
+                    j++;
+                }
+                else{
+                    j=0;
+                    i++;
+                }
+
+            }
+            return result;
+        }
+
+
 ## Review
 
 
