@@ -35,30 +35,35 @@
 
         private static string ConvertZ(string s,int numRows)
         {            
-            if(string.IsNullOrEmpty(s) ||s.Length <= numRows){
+            if(string.IsNullOrEmpty(s) ||s.Length <= numRows || numRows ==1){
                 return s;
             }
             var len = s.Length;
             var columns = len/numRows;
             var array = s.ToArray();
             var result = string.Empty;
-            Func<int,int> func = (j)=>{return j*(2*numRows-2);};
+            Func<int,int> func = (t)=>{return t*(2*numRows-2);};
             //每行间距都是，2n-2
             int i=0,j=0;
             while(i < numRows){
-                if(j<columns){
-                    if(i==0 || i== numRows-1){
-                        result+= j==0?array[i]: array[func(j)];
-                    }else{
-                        result+= j==0?array[i]: array[func(j)-i]+array[func(j)+i];
-                    }
+                if(j<=columns){
+                    //第一列
+                    if(j==0){
+                        result+=array[i];
+                    }else {
+                        //非第一和最后一行
+                        if(i!=0 && i!=numRows-1&& func(j)-i<len) 
+                            result+=array[func(j)-i];
+                        if( func(j)+i<len ){
+                            result+=array[func(j)+i];
+                        }     
+                    }                                   
                     j++;
                 }
                 else{
                     j=0;
                     i++;
                 }
-
             }
             return result;
         }
