@@ -71,6 +71,19 @@
 
 ## Review
 
+https://learning.getpostman.com/docs/postman/environments_and_globals/variables/
+
+主要介绍了 PostMan 中变量的说明：[Variables](https://learning.getpostman.com/docs/postman/environments_and_globals/variables/),
+按照作用域，变量可以分为以下5类：
+
+1. Global
+2. Collection
+3. Enviroment
+4. Data
+5. Local
+
+![官方图片](https://s3.amazonaws.com/postman-static-getpostman-com/postman-docs/scopes.png)
+
 
 ## Tip
 
