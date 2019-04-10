@@ -15,5 +15,11 @@
 
 有点类似设计模式中的模版方法把，再父类中定义一个抽象的函数，使用多态的特性，子类覆写改抽象函数从而实现switch中每个case的替代实现。
 
+
+#### ElasicSearch 
+
+索引 index,    类型 type, 文档 docment, 字段 field
+数据库 dbase,  表 table,   行 Row,       列 Column
+
 ## Share
 
