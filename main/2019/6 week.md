@@ -33,7 +33,9 @@ ES 使用 type 和 文档 id 生成一个 uid唯一标识，因此具有相同_i
 1. https://blog.csdn.net/u012927379/article/details/51259430
 2. https://blog.csdn.net/joyhen/article/details/21631833
 3. http://www.thanks.live/index.php/posts/request_cross_domain
-4. 
 
 ## Share
 
+985 第二周，慢慢寻找节奏把，之前都是尽快把工作忙完，好争取尽早下班，现在是考虑慢一点找点平衡，毕竟长时间高强度的工作人是顶不住的。
+
+本周工作，本周主要是改功能bug，迁移相关内容数据到Elasticsearch中，使用的是 logstash 工具，第一次用照着之前的文档做的，发现一直不成功，后来发现是工具版本太低了导致，有时候还是不能操之过急，工作也不能硬干啊，最起码需要有个简单的了解认识在动手，遇到问题后再详细的研究相关的点，最后主要问题就是踩了一下 ajaxfileupload.js 组件的坑。小组管理方面，有些任务还是要放手让别人去弄，但最后必须要做必要的check否则后果很危险，任务分配要尽量明确出来做好时间规划。
