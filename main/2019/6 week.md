@@ -1,7 +1,29 @@
 # 第 6 周  20190415-0421
 
 ## Algorithm
+[字符串转换整数 (atoi)](https://leetcode-cn.com/problems/string-to-integer-atoi/)
 
+        public int myAtoi(String str) {
+            if (string.IsNullOrWhiteSpace(str))
+                return 0;
+            var sign = 1;
+            var t = 0; 
+            var i = 0; 
+            var n = str.Length;
+            var array = str.ToArray();
+            while (i < n && array[i] == ' ')
+                ++i;
+            if (array[i] == '+' || array[i] == '-') {
+                sign = (array[i++] == '+') ? 1 : -1;
+            }
+            while (i < n && array[i] >= '0' && array[i] <= '9') {
+                if (t > int.MaxValue / 10 || (t == int.MaxValue / 10 && array[i] - '0' > 7)) {
+                    return (sign == 1) ? int.MaxValue : int.MinValue;
+                }
+                t = 10 * t + (array[i++] - '0');
+            }
+            return t * sign;
+        }
 
 ## Review
 https://docs.microsoft.com/zh-cn/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2015
