@@ -4,6 +4,7 @@
 
 
 ## Review
+https://docs.microsoft.com/zh-cn/visualstudio/test/isolating-code-under-test-with-microsoft-fakes?view=vs-2015
 
 #### 1. [Removal of mapping types](https://www.elastic.co/guide/en/elasticsearch/reference/6.0/removal-of-types.html)
 
@@ -18,7 +19,6 @@ ES 使用 type 和 文档 id 生成一个 uid唯一标识，因此具有相同_i
 每个文档类型使用一个 index,数据更稠密，全文索引也更准确
 
 多类型迁移使用 [**Reindex API**](https://www.elastic.co/guide/en/elasticsearch/reference/6.0/docs-reindex.html)
-
 
 ## Tip
 
